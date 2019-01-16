@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stuff In A Row</title>
+    <style>
+      html, body {
+        font-family: sans-serif;
+      }
+      #show-letters {
+        display: none;
+      }
+      #actual-letters {
+        font-size: 140%;
+        letter-spacing: 4px;
+        font-weight: bold;
+      }
+      #squares {
+        font-size: 140%;
+      }
+      #letters {
+        width: 20em;
+        font-size: 140%;
+        font-weight: bold;
+      }
+      .square {
+        width: 3em;
+        height: 3em;
+        text-align: center;
+        margin: 4px;
+        font-size: 140%;
+        font-weight: bold;
+        padding: 10px;
+      }
+      .square.special {
+        color: #f00;
+      }
+      ::placeholder {
+        opacity: 0.3;
+      }
+      @media print {
+        ::placeholder {
+          opacity: 0;
+        }
+        #controls {
+          display: none;
+        }
+        #show-letters {
+          display: block;
+        }
+      }
+      button {
+        padding: 0.5em;
+        font-size: 140%;
+      }
+      button.done {
+        color: #900;
+      }
+      button.done::after {
+        content: " (nothing more to do)";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Stuff In A Row</h1>
+
+    <div id="controls">
+      Enter all the numbers or letters that you want to use: <br/>
+      <input type="text" id="letters" /> <br />
+      <button id="calc">Calculate</button> (Each row and column must have all letters)
+    </div>
+
+    <div id="show-letters">
+      Use these: <span id="actual-letters"></span>
+    </div>
+
+    <hr />
+
+    <div id="squares">
+    </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
