@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 ## Puzzle maker
 
 A little interactive puzzle-maker. It's intended to be a bit interactive, and create printable puzzles.
